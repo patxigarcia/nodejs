@@ -59,8 +59,8 @@ app.get('/home', (req, res) => {
 // API REST - CRUD
 
 // READ - Obtener todos los productos
-app.get('/api/productos', (req, res) => {
-  res.json(productos);
+app.get('/api/productos', (req, res) => {  
+  res.json(productos);  
 });
 
 // READ - Obtener un producto por ID
