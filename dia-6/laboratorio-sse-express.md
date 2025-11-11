@@ -41,6 +41,11 @@ app.use(cors());
 // Servir archivos estáticos
 app.use(express.static('public'));
 
+// Ruta principal para servir el index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Endpoint SSE
 app.get('/events', (req, res) => {
   // Configurar headers para SSE
